@@ -1,0 +1,90 @@
+:root {
+  --primary: rgb(66, 66, 66);
+  --secondary: rgb(85, 85, 85);
+  --tertiary: white;
+}
+ body {background: black;
+ }
+
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+ }
+
+header, footer {
+  height:15vh;
+  background: var(--primary);
+  color: var(--tertiary);
+  text-align: center;
+}
+
+h1 {
+  color: var(--tertiary);
+}
+
+main {
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section {
+  width: 30%;
+  border: 2px dashed var(--primary);
+  height: 30vh;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  transition: all 1s ease;
+}
+
+section:hover {
+  box-shadow:  0 0 5px 5px grey, 0 0 5px 5px inset grey;
+  transition: all 1s ease;
+}
+
+section > * {
+  width: 90%;
+  margin: 0 auto;
+  color: var(--tertiary);
+} 
+
+section h3 {
+  border: 2px solid var(--primary);
+  position: relative;
+  bottom: 13px;
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+.code-block {
+  background: linear-gradient(var(--primary),var(--secondary));
+  align-self: stretch;
+  border-radius: 10px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  user-select: all;
+}
+
+.code::selection{
+  background-color: yellow;
+}
+
+@media screen and(max-width: 992px) {
+  section {
+    width: 45%;
+    transition: all 1s ease;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    width: 90%;
+    transition: all 1s ease;
+  }
+}
